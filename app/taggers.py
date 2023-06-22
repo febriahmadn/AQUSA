@@ -6,7 +6,7 @@ import pexpect
 class StanfordTagger(object):
 
   def __init__(self):
-    cmd = 'java -mx300m -cp stanford/stanford-postagger-withModel.jar edu.stanford.nlp.tagger.maxent.MaxentTagger -model stanford/english-left3words-distsim.tagger'
+    cmd = 'java -mx300m -classpath stanford/stanford-postagger.jar edu.stanford.nlp.tagger.maxent.MaxentTagger -model stanford/english-left3words-distsim.tagger'
     self.pos_tagger = pexpect.spawn(cmd)
     self.pos_tagger.expect('done', timeout=20)
     print('Initialized StanfordTagger')

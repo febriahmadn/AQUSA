@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: aqusa:latest
+    env_file:
+      - .env
+    volumes:
+      - .:/aqusa
+    ports:
+      - '9000:8000'
+    command: >
+      sh -c "
+      python download_punkt.py &&
+      python run.py &&
+      python manage.py db migrate && 
+      python manage.py db upgrade
+      "

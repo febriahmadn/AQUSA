@@ -33,3 +33,17 @@ Code Improvements
 
 ### Note
 This is a prototype application that's still quite difficult to figure out. Future versions will be much improved.
+
+### Docker Installation
+
+Docker Build
+
+```sh
+  docker-compose build
+```
+
+Docker Up
+
+```sh
+  docker-compose up -d
+```
