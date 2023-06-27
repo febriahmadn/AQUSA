@@ -59,5 +59,7 @@ target/
 # User added
 /tmp
 app/static/jquery.js
-stanford/english-*
-stanford/stanford-*
+# stanford/english-*
+# stanford/stanford-*
+
+.venv
